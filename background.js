@@ -40,7 +40,7 @@ chrome.runtime.onStartup.addListener(async () => {
 async function setupOffscreenDocument() {
   const existingContexts = await chrome.runtime.getContexts({
     contextTypes: ['OFFSCREEN_DOCUMENT'],
-    documentUrls: [chrome.runtime.getURL('offscreen.html')]
+    documentUrls: [chrome.runtime.getURL('offscreen/offscreen.html')]
   });
 
   if (existingContexts.length > 0) {
@@ -51,7 +51,7 @@ async function setupOffscreenDocument() {
 
   try {
     await chrome.offscreen.createDocument({
-      url: 'offscreen.html',
+      url: 'offscreen/offscreen.html',
       reasons: ['CLIPBOARD'],
       justification: '클립보드 내용을 실시간으로 모니터링하기 위해'
     });
