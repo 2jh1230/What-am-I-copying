@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "What_am_I_copying",
+  "version": "2.2",
+  "description": "실시간 클립보드 모니터링 및 히스토리 관리",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "clipboardRead",
+    "storage",
+    "alarms",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

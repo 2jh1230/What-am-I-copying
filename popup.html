@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="section-title">현재 클립보드</div>
+  <div id="current" class="empty">읽어오는 중...</div>
+  
+  <div class="section-title">
+    <span>복사 히스토리</span>
+    <div class="controls-section">
+      <button class="btn btn-refresh" id="refreshBtn">새로고침</button>
+      <button class="btn btn-clear" id="clearBtn">전체삭제</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="history"></div>
+  </div>
+  
+  <div id="toast" class="toast"></div>
+  
+  <div id="confirmDialog" class="confirm-dialog">
+    <div class="confirm-content">
+      <div class="confirm-title">확인</div>
+      <div class="confirm-message">정말로 모든 히스토리를 삭제하시겠습니까?</div>
+      <div class="confirm-buttons">
+        <button class="confirm-btn confirm-btn-cancel" id="confirmCancel">취소</button>
+        <button class="confirm-btn confirm-btn-confirm" id="confirmOk">확인</button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

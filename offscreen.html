@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Offscreen Document</title>
+</head>
+<body>
+  <!-- 포커스를 받을 수 있는 요소 추가 -->
+  <textarea id="clipboard-helper" style="position: fixed; left: -9999px; opacity: 0;" tabindex="0"></textarea>
+  
+  <!-- 이 페이지는 사용자에게 보이지 않습니다 -->
+  <!-- 클립보드 접근을 위한 숨겨진 페이지입니다 -->
+  <script src="offscreen.js"></script>
+</body>
+</html>
